@@ -1,0 +1,33 @@
+Camera:
+	3D-Schrägoben Perspektive
+
+
+Features:
+	Graben:	(Animation + Hidden)
+	Tanzen:	(Animation + Collision)
+	Einkacken: (Animation) [Counter] Endbedingung
+	
+
+	Siegbedingung:
+
+		
+Character Controls:
+	3D Movement (Laufen, Hüpfen)
+	Tanzen, Graben.
+
+
+Assets:
+	Graphics: (Textures + Meshes + Material)
+		Babyparrot
+		Enemies
+		Terrain
+	Audio:
+		Hintergrundmusik
+		Sounds für Maincharacter
+		Sounds für Enemy
+		Hitsounds
+
+
+Aufgabe Paul:
+	Playercontrols
+	Terrain
