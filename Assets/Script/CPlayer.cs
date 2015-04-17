@@ -4,9 +4,10 @@ using System.Collections;
 public class CPlayer : MonoBehaviour {
 
 	// Use this for initialization
-    Vector3 position = new Vector3(0,0,0);
+   static public Vector3 position = new Vector3(0,0,0);
 	void Start () 
     {
+        this.transform.localPosition = new Vector3(5,1,5);
         position = this.transform.localPosition;
 	}
 	
@@ -14,7 +15,12 @@ public class CPlayer : MonoBehaviour {
 	void FixedUpdate () 
     {
         position = this.transform.localPosition;
-        if (Input.GetKey(KeyCode.D)) 
+        move();
+	}
+
+    private void move()
+    {
+        if (Input.GetKey(KeyCode.D))
         {
             position.x += 0.2f;
             this.transform.localPosition = position;
@@ -41,7 +47,7 @@ public class CPlayer : MonoBehaviour {
             this.transform.localPosition = position;
         }
 
+    }
 
 
-	}
 }

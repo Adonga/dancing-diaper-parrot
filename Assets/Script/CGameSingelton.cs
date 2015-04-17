@@ -8,17 +8,21 @@ public class CGameSingelton : Singelton<CGameSingelton>
     public CGameState previousGameState;
     public Vector3 cameraPosition;
     public Vector3 cameraAngle;
+    public Vector3 playerPosition = CPlayer.position;
 	// Use this for initialization
 	void Start () {
         GameObject.DontDestroyOnLoad(this.gameObject);
         cameraAngle = this.transform.localEulerAngles;
         cameraAngle.x = 20;
+        cameraAngle.y = 20;
         this.transform.localEulerAngles = cameraAngle;
-        cameraPosition = this.transform.localEulerAngles;
+        this.transform.localPosition = new Vector3(5, 10, 5) - playerPosition;
+        cameraPosition = this.transform.localPosition;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        playerPosition = CPlayer.position;
+        this.transform.localPosition = playerPosition - new Vector3( 0 , -10, 25);
 	}
 }
