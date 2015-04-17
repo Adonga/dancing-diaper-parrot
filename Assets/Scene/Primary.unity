@@ -206,6 +206,7 @@ GameObject:
   - 124: {fileID: 1294392501}
   - 81: {fileID: 1294392500}
   - 114: {fileID: 1294392499}
+  - 45: {fileID: 1294392505}
   m_Layer: 0
   m_Name: GameSingelton
   m_TagString: MainCamera
@@ -299,3 +300,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!45 &1294392505
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294392498}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
