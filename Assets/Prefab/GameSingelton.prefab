@@ -103,6 +103,7 @@ MonoBehaviour:
   previousGameState: {fileID: 0}
   cameraPosition: {x: 20.0000038, y: 1.99999964, z: -2.8392714e-08}
   cameraAngle: {x: 20, y: 1.99999988, z: 6.69558498e-09}
+  playerPosition: {x: 0, y: 0, z: 0}
 --- !u!124 &12453920
 Behaviour:
   m_ObjectHideFlags: 1

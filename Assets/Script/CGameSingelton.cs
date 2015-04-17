@@ -24,5 +24,19 @@ public class CGameSingelton : Singelton<CGameSingelton>
 	void Update () {
         playerPosition = CPlayer.position;
         this.transform.localPosition = playerPosition - new Vector3( 0 , -10, 25);
+//        rotateCamera();
 	}
+
+    void rotateCamera() {
+        if (Input.GetKey(KeyCode.Q)) 
+        {
+            cameraAngle.y += 0.5f;
+            this.transform.localEulerAngles = cameraAngle;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            cameraAngle.y -= 0.5f;
+            this.transform.localEulerAngles = cameraAngle;
+        }
+    }
 }

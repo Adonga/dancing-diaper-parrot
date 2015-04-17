@@ -5,6 +5,8 @@ public class CPlayer : MonoBehaviour {
 
 	// Use this for initialization
    static public Vector3 position = new Vector3(0,0,0);
+   bool hit = false;
+   bool alive = true;
 	void Start () 
     {
         this.transform.localPosition = new Vector3(5,1,5);
@@ -49,5 +51,15 @@ public class CPlayer : MonoBehaviour {
 
     }
 
-
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.tag == "Player" && hit)
+        {
+//            CGameSingelton.
+        }
+        else if (coll.gameObject.tag == "Player") 
+        {
+            alive = false;
+        }
+    }
 }
