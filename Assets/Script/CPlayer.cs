@@ -13,6 +13,7 @@ public class CPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
     {
+        position = this.transform.localPosition;
         if (Input.GetKey(KeyCode.D)) 
         {
             position.x += 0.2f;
@@ -25,24 +26,21 @@ public class CPlayer : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.W))
         {
-            position.y += 0.2f;
+            position.z += 0.2f;
             this.transform.localPosition = position;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            position.y -= 0.2f;
-            this.transform.localPosition = position;
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            position.z += 0.2f;
-            this.transform.localPosition = position;
-        }
-        else if (Input.GetKey(KeyCode.E))
-        {
             position.z -= 0.2f;
             this.transform.localPosition = position;
         }
+        //jump
+        if (Input.GetKey(KeyCode.Space))
+        {
+            position.y += 0.2f;
+            this.transform.localPosition = position;
+        }
+
 
 
 	}

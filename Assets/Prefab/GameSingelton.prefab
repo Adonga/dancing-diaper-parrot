@@ -13,6 +13,7 @@ GameObject:
   - 124: {fileID: 12453920}
   - 81: {fileID: 8189558}
   - 114: {fileID: 11496818}
+  - 45: {fileID: 4598006}
   m_Layer: 0
   m_Name: GameSingelton
   m_TagString: MainCamera
@@ -26,8 +27,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141096}
-  m_LocalRotation: {x: .0436127521, y: .0174357966, z: -.000761263422, w: .998896062}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: .173648223, y: 0, z: 0, w: .984807789}
+  m_LocalPosition: {x: .300000012, y: 20, z: -1.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,7 +51,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 1000
-  field of view: 109.5
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -64,6 +65,14 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
+--- !u!45 &4598006
+Skybox:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141096}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!81 &8189558
 AudioListener:
   m_ObjectHideFlags: 1
@@ -92,8 +101,8 @@ MonoBehaviour:
   alive: 0
   currentGameState: {fileID: 0}
   previousGameState: {fileID: 0}
-  cameraPosition: {x: 0, y: 0, z: 0}
-  cameraAngle: {x: 0, y: 0, z: 0}
+  cameraPosition: {x: 20.0000038, y: 1.99999964, z: -2.8392714e-08}
+  cameraAngle: {x: 20, y: 1.99999988, z: 6.69558498e-09}
 --- !u!124 &12453920
 Behaviour:
   m_ObjectHideFlags: 1
