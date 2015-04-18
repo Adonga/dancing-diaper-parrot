@@ -18,7 +18,9 @@ public class CEnemy : MonoBehaviour {
     {
         if(coll.gameObject.tag =="Player" )
         {
+            Debug.Log("Dead");
             alive = false;
+            DestroyObject(gameObject);
         }
     }
 
