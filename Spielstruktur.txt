@@ -1,5 +1,5 @@
 Camera:
-	3D-Schrägoben Perspektive
+	3D-Schrägoben Perspektive	+
 
 
 Features:
@@ -12,8 +12,9 @@ Features:
 
 		
 Character Controls:
-	3D Movement (Laufen, Hüpfen)
-	Tanzen, Graben.
+	3D Movement (Laufen, Hüpfen)	+
+	Tanzen, 
+	Graben 				+
 
 
 Assets:

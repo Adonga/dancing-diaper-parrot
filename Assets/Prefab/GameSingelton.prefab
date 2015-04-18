@@ -12,8 +12,8 @@ GameObject:
   - 92: {fileID: 9244930}
   - 124: {fileID: 12453920}
   - 81: {fileID: 8189558}
-  - 114: {fileID: 11496818}
   - 45: {fileID: 4598006}
+  - 114: {fileID: 11442658}
   m_Layer: 0
   m_Name: GameSingelton
   m_TagString: MainCamera
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141096}
   m_LocalRotation: {x: .173648223, y: 0, z: 0, w: .984807789}
-  m_LocalPosition: {x: .300000012, y: 20, z: -1.29999995}
+  m_LocalPosition: {x: .300000012, y: 20, z: 26.8500004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -87,7 +87,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141096}
   m_Enabled: 1
---- !u!114 &11496818
+--- !u!114 &11442658
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -101,9 +101,10 @@ MonoBehaviour:
   alive: 0
   currentGameState: {fileID: 0}
   previousGameState: {fileID: 0}
-  cameraPosition: {x: 20.0000038, y: 1.99999964, z: -2.8392714e-08}
-  cameraAngle: {x: 20, y: 1.99999988, z: 6.69558498e-09}
-  playerPosition: {x: 0, y: 0, z: 0}
+  cameraPosition: {x: 0, y: 0, z: 0}
+  cameraAngle: {x: 0, y: 0, z: 0}
+  playerPosition: {x: 1.45655751, y: .493892491, z: .13596724}
+  x: 0
 --- !u!124 &12453920
 Behaviour:
   m_ObjectHideFlags: 1

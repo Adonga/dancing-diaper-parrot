@@ -5,13 +5,14 @@ public class CEnemy : MonoBehaviour {
 
 	// Use this for initialization
     public bool alive = true;
+    public Vector3 position;
 	void Start () {
-	
+        position = this.transform.localPosition;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
     void OnCollisionEnter(Collision coll) 
     {
@@ -25,14 +26,14 @@ public class CEnemy : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log("AAAAAHHHHHH!!11!!");
+  //          Debug.Log("AAAAAHHHHHH!!11!!");
         }
     }
     void OnTriggerStay(Collider coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log("AAAAAHHHHHH!!11!!");
+      //      Debug.Log("AAAAAHHHHHH!!11!!");
         }
     }
 }
