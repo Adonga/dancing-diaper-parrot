@@ -27,4 +27,14 @@ public class GameJoltAPIManager : MonoBehaviour
     {
         GJAPIHelper.Scores.ShowLeaderboards();
     }
+
+   public void startGame() 
+    {
+        Application.LoadLevel("Paul");
+    }
+
+   public void Exit() 
+   {
+       Application.Quit();
+   }
 }
