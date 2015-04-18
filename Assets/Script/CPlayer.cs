@@ -9,11 +9,14 @@ public class CPlayer : MonoBehaviour {
     static public bool underGround;
     static public int fearBar;
     float movementSpeed;
+    float up;
 	void Start () 
     {
         position = new Vector3(0, 0, 0);
         this.transform.localPosition = new Vector3(0,1,0);
         position = this.transform.localPosition;
+        up = this.transform.localEulerAngles.y;
+        
         hit = false;
         alive = true;
         underGround = false;
@@ -25,6 +28,7 @@ public class CPlayer : MonoBehaviour {
 	void FixedUpdate () 
     {
         position = this.transform.localPosition;
+        this.transform.localEulerAngles = new Vector3(0,up,0);
         move();
         digg();
         dance();
@@ -44,7 +48,7 @@ public class CPlayer : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.W))
         {
-            position.z += movementSpeed;
+            position.z+= movementSpeed;
             this.transform.localPosition = position;
         }
         else if (Input.GetKey(KeyCode.S))
