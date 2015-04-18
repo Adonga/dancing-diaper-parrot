@@ -3,14 +3,22 @@ using System.Collections;
 
 public class CPlayer : MonoBehaviour {
 
-	// Use this for initialization
-   static public Vector3 position = new Vector3(0,0,0);
-   bool hit = false;
-   bool alive = true;
+    static public Vector3 position;
+    bool hit;
+    bool alive;
+    static public bool underGround;
+    static public int fearBar;
+    float movementSpeed;
 	void Start () 
     {
+        position = new Vector3(0, 0, 0);
         this.transform.localPosition = new Vector3(5,1,5);
         position = this.transform.localPosition;
+        hit = false;
+        alive = true;
+        underGround = false;
+        fearBar = 0;
+        movementSpeed = 0.2f;
 	}
 	
 	// Update is called once per frame
@@ -18,28 +26,30 @@ public class CPlayer : MonoBehaviour {
     {
         position = this.transform.localPosition;
         move();
+        digg();
+        dance();
 	}
 
     private void move()
     {
         if (Input.GetKey(KeyCode.D))
         {
-            position.x += 0.2f;
+            position.x += movementSpeed;
             this.transform.localPosition = position;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            position.x -= 0.2f;
+            position.x -= movementSpeed;
             this.transform.localPosition = position;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            position.z += 0.2f;
+            position.z += movementSpeed;
             this.transform.localPosition = position;
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            position.z -= 0.2f;
+            position.z -= movementSpeed;
             this.transform.localPosition = position;
         }
         //jump
@@ -48,18 +58,63 @@ public class CPlayer : MonoBehaviour {
             position.y += 0.2f;
             this.transform.localPosition = position;
         }
+        if (underGround) 
+        {
+            position.y = -5;
+            this.transform.localPosition = position;
+        }
 
     }
 
+    private void digg() {
+        if (Input.GetKeyDown(KeyCode.Tab) && !underGround) 
+        {
+            underGround = true;
+            this.transform.localPosition = new Vector3(position.x,-5,position.z);
+        }
+        else if (Input.GetKeyDown(KeyCode.Tab)) 
+        {
+            underGround = false;
+            this.transform.localPosition = new Vector3(position.x,1,position.z);
+        }
+
+    }
+    private void dance() 
+    {
+        //do dancing stuff
+        if (Input.GetKey(KeyCode.F))
+        {
+            hit = true;
+            Debug.Log("Dance");
+        }
+        else
+        {
+       //     hit = false;
+        }
+    }
+
+
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == "Player" && hit)
+        if (coll.gameObject.tag == "Enemy" && !hit) 
         {
-//            CGameSingelton.
-        }
-        else if (coll.gameObject.tag == "Player") 
-        {
+            Debug.Log("Dead");
             alive = false;
+        }
+    }
+    void OnTriggerEnter(Collider coll) 
+    {
+        if (coll.gameObject.tag == "Enemy" && !underGround) 
+        {
+            movementSpeed = 0.05f;
+        }
+    }
+
+    void OnTriggerExit(Collider coll) 
+    {
+        if (coll.gameObject.tag == "Enemy") 
+        {
+            movementSpeed = 0.2f;
         }
     }
 }
