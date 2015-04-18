@@ -19,7 +19,7 @@ public class CGameSingelton : Singelton<CGameSingelton>
         cameraAngle.x = 40;
         cameraAngle.y = 40;
         this.transform.localEulerAngles = cameraAngle;
-        this.transform.localPosition =  playerPosition - new Vector3(0 , -5, 40) ;
+        this.transform.localPosition =  playerPosition - new Vector3(13 , -5, 12) ;
         cameraPosition = this.transform.localPosition;
         inGame = false;
 	}
@@ -31,12 +31,6 @@ public class CGameSingelton : Singelton<CGameSingelton>
 
     void computeCameraPosition() 
     {
-        if (!inGame) 
-        {
- 
-        }
-        else
-        { 
         if (CPlayer.underGround)
         {
             cameraPosition.y = 6;
@@ -46,7 +40,6 @@ public class CGameSingelton : Singelton<CGameSingelton>
         cameraPosition = playerPosition - new Vector3(13, -20, 12);
         this.transform.localPosition = cameraPosition;
        // rotateCamera();
-        }
     }
     void rotateCamera()
     {
