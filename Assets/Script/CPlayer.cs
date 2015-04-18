@@ -12,7 +12,7 @@ public class CPlayer : MonoBehaviour {
 	void Start () 
     {
         position = new Vector3(0, 0, 0);
-        this.transform.localPosition = new Vector3(5,1,5);
+        this.transform.localPosition = new Vector3(0,1,0);
         position = this.transform.localPosition;
         hit = false;
         alive = true;
@@ -28,7 +28,7 @@ public class CPlayer : MonoBehaviour {
         move();
         digg();
         dance();
-	}
+    }
 
     private void move()
     {
@@ -85,7 +85,7 @@ public class CPlayer : MonoBehaviour {
         if (Input.GetKey(KeyCode.F))
         {
             hit = true;
-            Debug.Log("Dance");
+      //      Debug.Log("Dance");
         }
         else
         {
@@ -98,7 +98,7 @@ public class CPlayer : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Enemy" && !hit) 
         {
-            Debug.Log("Dead");
+   //         Debug.Log("Dead");
             alive = false;
         }
     }
