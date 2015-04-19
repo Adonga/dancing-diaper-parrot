@@ -19,11 +19,11 @@ public class CGameSingelton : Singelton<CGameSingelton>
 	void Start () {
         GameObject.DontDestroyOnLoad(this.gameObject);
         cameraAngle = this.transform.localEulerAngles;
-        cameraAngle.x = 40;
-        cameraAngle.y = 40;
-        this.transform.localEulerAngles = cameraAngle;
+       // cameraAngle.x = 40;
+       // cameraAngle.y = 40;
+      //  this.transform.localEulerAngles = cameraAngle;
         this.transform.localPosition =  playerPosition - new Vector3(13 , -5, 12) ;
-        cameraPosition = this.transform.localPosition;
+       // cameraPosition = this.transform.localPosition;
         inGame = false;
 	}
 	
@@ -33,10 +33,10 @@ public class CGameSingelton : Singelton<CGameSingelton>
         {
             Application.LoadLevel("MainMenu");
         }
-        computeCameraPosition();
+        //computeCameraPosition();
 	}
 
-    void computeCameraPosition() 
+    /*void computeCameraPosition() 
     {
         if (CPlayer.underGround)
         {
@@ -66,16 +66,16 @@ public class CGameSingelton : Singelton<CGameSingelton>
 
             x -= 0.05f;
         }
-    /*    else
-        {
-            cameraPosition.x = playerPosition.x + sin;
-            cameraPosition.z = playerPosition.z + cos;
-        }
-        this.transform.LookAt(playerPosition);
-     */       
+    //   else
+     //   {
+      //      cameraPosition.x = playerPosition.x + sin;
+      //      cameraPosition.z = playerPosition.z + cos;
+      //  }
+     //   this.transform.LookAt(playerPosition);
+            
         cameraPosition.y = 5;
         
         this.transform.localPosition = cameraPosition;
-    }
+    }*/
 
 }
