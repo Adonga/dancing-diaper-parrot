@@ -33,6 +33,10 @@ public class CPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
     {
+        if (!alive) 
+        {
+            DestroyObject(gameObject);
+        }
         position = this.transform.localPosition;
         this.transform.localEulerAngles = new Vector3(0,up,0);
         move();
@@ -140,7 +144,8 @@ public class CPlayer : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Enemy" && hit) 
         {
-            movementSpeed = 0.8f;
+            Vector3 direction = coll.gameObject.transform.localPosition - position;
+            this.transform.localPosition += 0.3f * direction;
         }
     }
     void OnTriggerExit(Collider coll) 
