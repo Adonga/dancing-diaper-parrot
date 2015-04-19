@@ -31,6 +31,7 @@ public class GameJoltAPIManager : MonoBehaviour
    public void startGame() 
     {
         Application.LoadLevel("Paul");
+        CGameSingelton.instance.inGame = true;
     }
 
    public void Exit() 

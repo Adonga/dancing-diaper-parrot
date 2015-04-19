@@ -4,14 +4,17 @@ using System.Collections;
 public class CGameSingelton : Singelton<CGameSingelton>
 {
     public bool alive;
-    bool inGame;
+    public bool inGame;
+    public int egg;
     public CGameState currentGameState;
     public CGameState previousGameState;
+    public Vector3 destinatinPosition;
     public Vector3 cameraPosition;
     public Vector3 cameraAngle;
     public Vector3 playerPosition = CPlayer.position;
     public float x;
- 
+    public bool win;
+    public GameObject enemy;
 	// Use this for initialization
 	void Start () {
         GameObject.DontDestroyOnLoad(this.gameObject);
@@ -26,6 +29,10 @@ public class CGameSingelton : Singelton<CGameSingelton>
 	
 	// Update is called once per frame
 	void Update () {
+        if (win)
+        {
+            Application.LoadLevel("MainMenu");
+        }
         computeCameraPosition();
 	}
 

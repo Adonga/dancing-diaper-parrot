@@ -8,34 +8,45 @@ public class CPlayer : MonoBehaviour {
     bool alive;
     static public bool underGround;
     static public int fearBar;
-    float movementSpeed;
+  public  float movementSpeed;
     float up;
+    //private Animation anim;
 	void Start () 
     {
-        position = new Vector3(0, 0, 0);
-        this.transform.localPosition = new Vector3(0,1,0);
+        position = new Vector3(2, 1, 2);
+        this.transform.localPosition = position;
         position = this.transform.localPosition;
         up = this.transform.localEulerAngles.y;
-        
+        //anim = this.GetComponent<Animation>();
         hit = false;
         alive = true;
         underGround = false;
         fearBar = 0;
         movementSpeed = 0.2f;
+       /* if (!GetComponent<Animation>().isPlaying)
+        {
+            GetComponent<Animation>().Play("Run");
+        }*/
+
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () 
     {
+        if (!alive) 
+        {
+            DestroyObject(gameObject);
+        }
         position = this.transform.localPosition;
         this.transform.localEulerAngles = new Vector3(0,up,0);
         move();
         digg();
         dance();
+        dash();
     }
 
     private void move()
-    {
+    {   
         if (Input.GetKey(KeyCode.D))
         {
             position.x += movementSpeed;
@@ -93,17 +104,32 @@ public class CPlayer : MonoBehaviour {
         }
         else
         {
-       //     hit = false;
+            hit = false;
         }
     }
-
-
+    private void dash()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            position = this.transform.localPosition;
+            
+        }
+    }
+    Vector3 GetEnemyPosition() 
+    {
+        return new Vector3(0, 0, 0);
+    }
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == "Enemy" && !hit) 
+        if (coll.gameObject.tag == "Enemy" && !hit)
         {
-   //         Debug.Log("Dead");
+            //         Debug.Log("Dead");
             alive = false;
+            DestroyObject(gameObject);
+        }
+        else if (coll.gameObject.tag == "Enemy")
+        {
+            movementSpeed = 0.2f;
         }
     }
     void OnTriggerEnter(Collider coll) 
@@ -112,13 +138,18 @@ public class CPlayer : MonoBehaviour {
         {
             movementSpeed = 0.05f;
         }
+        
     }
-
+    void OnTriggerStay(Collider coll) 
+    {
+        if (coll.gameObject.tag == "Enemy" && hit) 
+        {
+            Vector3 direction = coll.gameObject.transform.localPosition - position;
+            this.transform.localPosition += 0.3f * direction;
+        }
+    }
     void OnTriggerExit(Collider coll) 
     {
-        if (coll.gameObject.tag == "Enemy") 
-        {
-            movementSpeed = 0.2f;
-        }
+        movementSpeed = 0.2f;  
     }
 }
