@@ -80,7 +80,6 @@ public class CPlayer : MonoBehaviour {
         //jump
         if (Input.GetKey(KeyCode.Space))
         {
-            anim.SetTrigger("Hoo");
             position.y += 0.2f;
             this.transform.localPosition = position;
         }
