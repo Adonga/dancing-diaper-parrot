@@ -14,7 +14,7 @@ public class CGameSingelton : Singelton<CGameSingelton>
     public Vector3 playerPosition = CPlayer.position;
     public float x;
     public bool win;
-    public GameObject enemy;
+    public GameObject[] mEnemy;
 	// Use this for initialization
 	void Start () {
         GameObject.DontDestroyOnLoad(this.gameObject);
@@ -31,6 +31,8 @@ public class CGameSingelton : Singelton<CGameSingelton>
 	void Update () {
         if (win)
         {
+            win = false;
+            egg = 0;
             Application.LoadLevel("MainMenu");
         }
         //computeCameraPosition();

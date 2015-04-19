@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CPlayer : MonoBehaviour {
 
+    Animator anim;
     static public Vector3 position;
     bool hit;
     bool alive;
@@ -23,11 +24,7 @@ public class CPlayer : MonoBehaviour {
         underGround = false;
         fearBar = 0;
         movementSpeed = 0.2f;
-       /* if (!GetComponent<Animation>().isPlaying)
-        {
-            GetComponent<Animation>().Play("Run");
-        }*/
-
+        anim = this.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -38,15 +35,20 @@ public class CPlayer : MonoBehaviour {
             DestroyObject(gameObject);
         }
         position = this.transform.localPosition;
-        this.transform.localEulerAngles = new Vector3(0,up,0);
+        this.transform.localEulerAngles = new Vector3(0,this.transform.localEulerAngles.y,0);
         move();
         digg();
         dance();
-        dash();
     }
 
     private void move()
-    {   
+    {
+        //camera view direction
+        Vector3 viewDirection = position - Camera.main.transform.localPosition;
+        viewDirection.y = 0;
+        viewDirection.Normalize();
+        viewDirection=Camera.main.transform.localToWorldMatrix.MultiplyVector(viewDirection);
+        viewDirection = this.transform.TransformDirection(viewDirection);
         if (Input.GetKey(KeyCode.D))
         {
             position.x += movementSpeed;
@@ -56,6 +58,14 @@ public class CPlayer : MonoBehaviour {
         {
             position.x -= movementSpeed;
             this.transform.localPosition = position;
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            this.transform.localEulerAngles = new Vector3(0, this.transform.localEulerAngles.y + 1, 0);
+        }
+        else if (Input.GetKey(KeyCode.Q))
+        {
+            this.transform.localEulerAngles = new Vector3(0, this.transform.localEulerAngles.y - 1, 0);
         }
         if (Input.GetKey(KeyCode.W))
         {
@@ -70,6 +80,7 @@ public class CPlayer : MonoBehaviour {
         //jump
         if (Input.GetKey(KeyCode.Space))
         {
+            anim.SetTrigger("Hoo");
             position.y += 0.2f;
             this.transform.localPosition = position;
         }
@@ -99,26 +110,14 @@ public class CPlayer : MonoBehaviour {
         //do dancing stuff
         if (Input.GetKey(KeyCode.F))
         {
-            hit = true;
-      //      Debug.Log("Dance");
-        }
+            hit = true;}
         else
         {
             hit = false;
         }
     }
-    private void dash()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            position = this.transform.localPosition;
-            
-        }
-    }
-    Vector3 GetEnemyPosition() 
-    {
-        return new Vector3(0, 0, 0);
-    }
+    
+ 
     void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.tag == "Enemy" && !hit)
@@ -130,6 +129,7 @@ public class CPlayer : MonoBehaviour {
         else if (coll.gameObject.tag == "Enemy")
         {
             movementSpeed = 0.2f;
+            fearBar += 5;
         }
     }
     void OnTriggerEnter(Collider coll) 
@@ -145,6 +145,7 @@ public class CPlayer : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy" && hit) 
         {
             Vector3 direction = coll.gameObject.transform.localPosition - position;
+            direction.y = 0;
             this.transform.localPosition += 0.3f * direction;
         }
     }

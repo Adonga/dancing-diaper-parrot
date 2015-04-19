@@ -4,6 +4,7 @@ using System.Collections;
 public class Dest : MonoBehaviour {
 
 	void Start () {
+        this.transform.localPosition = new Vector3(-10,0,-10);
         CGameSingelton.instance.destinatinPosition = this.transform.localPosition;
 	}
     void OnCollisionEnter(Collision coll) 

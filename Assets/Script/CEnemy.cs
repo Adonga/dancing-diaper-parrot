@@ -9,18 +9,18 @@ public class CEnemy : MonoBehaviour {
     Vector3 direction;
     int time;
 	void Start () {
-        this.transform.localPosition = new Vector3(5,0,1);
         position = this.transform.localPosition;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        direction = this.transform.localPosition - CGameSingelton.instance.destinatinPosition;
+        direction = CGameSingelton.instance.destinatinPosition- this.transform.localPosition;
+        direction.y = 0;
        // direction = new Vector3(Random.value - 0.5f, 0, Random.value - 0.5f);
         direction.Normalize();
 
-   //     this.transform.localPosition = this.transform.localPosition + direction;
+        this.transform.localPosition += direction * 0.1f;
 
         time++; 
 	}
@@ -31,7 +31,7 @@ public class CEnemy : MonoBehaviour {
             alive = false;
             DestroyObject(gameObject);
         }
-        if (coll.gameObject.tag == "Dest") 
+        if (coll.gameObject.tag == "Destination") 
         {
             DestroyObject(gameObject);
         }
