@@ -145,7 +145,6 @@ public class CPlayer : MonoBehaviour {
         if (coll.gameObject.tag == "Enemy" && hit) 
         {
             Vector3 direction = coll.gameObject.transform.localPosition - position;
-            direction.y = 0;
             this.transform.localPosition += 0.3f * direction;
         }
     }

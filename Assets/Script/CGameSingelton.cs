@@ -15,6 +15,7 @@ public class CGameSingelton : Singelton<CGameSingelton>
     public float x;
     public bool win;
     public GameObject[] mEnemy;
+    public GameObject destination;
 	// Use this for initialization
 	void Start () {
         GameObject.DontDestroyOnLoad(this.gameObject);
