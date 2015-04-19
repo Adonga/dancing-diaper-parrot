@@ -10,19 +10,24 @@ public class CPlayer : MonoBehaviour {
     static public int fearBar;
   public  float movementSpeed;
     float up;
-  
+    //private Animation anim;
 	void Start () 
     {
         position = new Vector3(2, 1, 2);
         this.transform.localPosition = position;
         position = this.transform.localPosition;
         up = this.transform.localEulerAngles.y;
-        
+        //anim = this.GetComponent<Animation>();
         hit = false;
         alive = true;
         underGround = false;
         fearBar = 0;
         movementSpeed = 0.2f;
+       /* if (!GetComponent<Animation>().isPlaying)
+        {
+            GetComponent<Animation>().Play("Run");
+        }*/
+
 	}
 	
 	// Update is called once per frame

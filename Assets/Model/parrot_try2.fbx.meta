@@ -56,6 +56,7 @@ ModelImporter:
     7400016: Armature|RotatingFury
     7400018: Armature|Run
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Sphere_MeshPart0
     13700002: Sphere_MeshPart1
   materials:
@@ -67,13 +68,669 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run
+      takeName: Run
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves:
+      - name: Curve
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          - time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Pose1
+      takeName: Pose1
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: RotatingFury
+      takeName: RotatingFury
+      firstFrame: 0
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Hoo
+      takeName: Hoo
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: komischerTanz
+      takeName: komischerTanz
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Hoo
+      takeName: Armature|Hoo
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|komischerTanz
+      takeName: Armature|komischerTanz
+      firstFrame: 0
+      lastFrame: 21
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Pose1
+      takeName: Armature|Pose1
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|RotatingFury
+      takeName: Armature|RotatingFury
+      firstFrame: 0
+      lastFrame: 2
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|Run
+      takeName: Armature|Run
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Chest
+        weight: 1
+      - path: Armature/Chest/Arm_L
+        weight: 1
+      - path: Armature/Chest/Arm_L/Arm_L_end
+        weight: 1
+      - path: Armature/Chest/Arm_R
+        weight: 1
+      - path: Armature/Chest/Arm_R/Arm_R_end
+        weight: 1
+      - path: Armature/Chest/Foot_L
+        weight: 1
+      - path: Armature/Chest/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature/Chest/Foot_R
+        weight: 1
+      - path: Armature/Chest/Foot_R/Foot_R_end
+        weight: 1
+      - path: Armature/Chest/Head
+        weight: 1
+      - path: Armature/Chest/Head/Head_end
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: mirror
+        weight: 1
+      - path: Sphere
+        weight: 1
+      - path: Sphere/Sphere_MeshPart0
+        weight: 1
+      - path: Sphere/Sphere_MeshPart1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
